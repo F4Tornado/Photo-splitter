@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Image splitter</title>
+  <meta charset="utf-8">
+  <style>
+    #contain {
+      position: absolute;
+      display: flex;
+      left: 0;
+      top: 0;
+      align-items: center;
+      height: 100vh;
+      z-index: -10000000;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="file" accept="image/*" id="file">
+  <input type="number" min=2 max=10 value=2 id="splits">
+  <button onclick="download()">Download images</button>
+  <div id="contain">
+    <canvas id="visible"></canvas>
+  </div>
+  <canvas id="hidden" hidden></canvas>
+  <canvas id="hidden2" hidden></canvas>
+  <a id="download" hidden></a>
+  <script src="sketch.js"></script>
+</body>
+
+</html>
